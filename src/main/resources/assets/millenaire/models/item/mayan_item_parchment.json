@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "millenaire:item/mayan_item_parchment"
+    "layer0": "millenaire:item/parchment_items"
   }
 }

@@ -1,0 +1,35 @@
+{
+  "parent": "millenaire:cresus",
+  "criteria": {
+    "cresus": {
+      "conditions": {
+        "item": {
+          "items": [
+            "millenaire:denier_or"
+          ]
+        }
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "title": {
+      "translate": "advancements.cresus.title"
+    },
+    "description": {
+      "translate": "advancements.cresus.description"
+    },
+    "announce_to_chat": true,
+    "frame": "task",
+    "hidden": false,
+    "icon": {
+      "item": "millenaire:denier_or"
+    },
+    "show_toast": true
+  },
+  "requirements": [
+    [
+      "cresus"
+    ]
+  ]
+}

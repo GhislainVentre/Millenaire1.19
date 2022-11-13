@@ -1,13 +1,13 @@
 {
   "display": {
     "title": {
-      "translate": "advancements.masterfarmer.title"
+      "translate": "advancements.cheers.title"
     },
     "description": {
-      "translate": "advancements.masterfarmer.description"
+      "translate": "advancements.cheers.description"
     },
     "icon": {
-      "item": "millenaire:grapes"
+      "item": "millenaire:calva"
     },
     "frame": "task",
     "show_toast": true,
@@ -21,7 +21,7 @@
         "items": [
           {
             "items": [
-              "millenaire:grapes"
+              "millenaire:calva"
             ]
           }
         ]

@@ -1,13 +1,13 @@
 {
   "display": {
     "title": {
-      "translate": "advancements.masterfarmer.title"
+      "translate": "advancements.hired.title"
     },
     "description": {
-      "translate": "advancements.masterfarmer.description"
+      "translate": "advancements.hired.description"
     },
     "icon": {
-      "item": "millenaire:grapes"
+      "item": "millenaire:norman_axe"
     },
     "frame": "task",
     "show_toast": true,
@@ -21,7 +21,7 @@
         "items": [
           {
             "items": [
-              "millenaire:grapes"
+              "millenaire:norman_axe"
             ]
           }
         ]

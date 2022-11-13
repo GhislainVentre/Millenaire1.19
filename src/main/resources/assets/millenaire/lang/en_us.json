@@ -1,4 +1,52 @@
 {
+  "advancements.millenaire.title": "Millenaire",
+  "advancements.millenaire.description": "Welcome to Millenaire!",
+    "advancements.cheers.title": "Cheers!",
+    "advancements.cheers.description": "Have calva",
+
+    "advancements.hired.title": "Hired!",
+    "advancements.hired.description": "Get a norman axe",
+
+    "advancements.masterfarmer.title": "Master Farmer",
+    "advancements.masterfarmer.description": "Get grapes",
+
+    "advancements.explorer.title": "Explorer",
+    "advancements.explorer.description": "Get a map",
+      "advancements.marcoPolo.title": "Marco Polo",
+      "advancements.marcoPolo.description": "Get a compass",
+        "advancements.magellan.title": "Magellan",
+        "advancements.magellan.description": "Get a sextant",
+
+      "advancements.self_defense.title": "Self Defense",
+      "advancements.self_defense.description": "Get a sword",
+
+      "advancements.pantheon.title": "Pantheon",
+      "advancements.pantheon.description": "Get a statue",
+
+    "advancements.dark_side.title": "DarkSide",
+    "advancements.dark_side.description": "Get a dark sword",
+      "advancements.scipio.title": "Scipio",
+      "advancements.scipio.description": "Get a dark axe",
+        "advancements.attila.title": "Attila",
+        "advancements.attila.description": "Get a dark pickaxe",
+
+    "advancements.cresus.title": "Cresus",
+    "advancements.cresus.description": "Get Gold Denier",
+      "advancements.wand_summoning.title": "Wand of Summoning",
+      "advancements.wand_summoning.description": "Get a wand of summoning",
+        "advancements.village_leader.title": "Village Leader",
+        "advancements.village_leader.description": "Be a village leader",
+
+  "advancements.the_quest.title": "The Quest",
+  "advancements.the_quest.description": "Get a quest book",
+    "advancements.maitre_a_penser.title": "Maitre a Penser",
+    "advancements.maitre_a_penser.description": "Be maitre a penser",
+      "advancements.forbidden_knowledge.title": "Forbidden Knowledge",
+      "advancements.forbidden_knowledge.description": "Get a book of forbidden knowledge",
+      "advancements.puja.title": "Puja",
+      "advancements.puja.description": "Get a puja",
+
+
   "item.millenaire.denier": "Denier",
   "item.millenaire.denier_argent": "Denier d'argent",
   "item.millenaire.denier_or": "Denier d'or",
