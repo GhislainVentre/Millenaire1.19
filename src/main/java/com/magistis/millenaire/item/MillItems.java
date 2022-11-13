@@ -112,7 +112,7 @@ public class MillItems {
     public static final RegistryObject<Item> AMULET_VISHNU = ITEMS.register("amulet_vishnu", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Wallet
-    public static final RegistryObject<Item> ITEM_MILL_PURSE = ITEMS.register("mill_purse", () -> new MillWalletItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> ITEM_MILL_PURSE = ITEMS.register("mill_purse", () -> new MillWalletItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB).stacksTo(1)));
 
     //Sign
     public static final RegistryObject<Item> ITEM_MILL_SIGN = ITEMS.register("mill_sign", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));

@@ -1,9 +1,9 @@
 package com.magistis.millenaire.item;
 
-import com.magistis.millenaire.item.MillItems;
-import com.magistis.millenaire.Millenaire;
+//import com.magistis.millenaire.Millenaire;
 import com.magistis.millenaire.CommonUtilities;
 
+import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -12,12 +12,17 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.nbt.CompoundTag;
 
+import javax.annotation.ParametersAreNonnullByDefault;
+
 public class MillWalletItem extends Item {
+    CompoundTag nbt;
     public MillWalletItem(Properties properties) {
         super(properties);
     }
 
     @Override
+    @ParametersAreNonnullByDefault
+    @MethodsReturnNonnullByDefault
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
 
         ItemStack itemStack = player.getItemInHand(hand);
@@ -32,7 +37,6 @@ public class MillWalletItem extends Item {
         return super.use(level, player, hand);
     }
 
-
     private void addDenierToWallet(ItemStack stack, Player player) {
         if(stack.getItem() == this)
         {
@@ -44,22 +48,23 @@ public class MillWalletItem extends Item {
 
             for(int i = 0; i < player.getInventory().getContainerSize(); i++)
             {
-                player.getInventory().getItem(i);
+                ItemStack slot = player.getInventory().getItem(i);
                 // if stack is denier
-                if(player.getInventory().getItem(i).getItem() == MillItems.DENIER.get()) {
-                    denier += player.getInventory().getItem(i).getCount();
+                if(slot.getItem() == MillItems.DENIER.get()) {
+                    denier += slot.getCount();
+                    player.getInventory().removeItem(i, slot.getCount());
                 }
                 // if stack is denier argent
-                else if(player.getInventory().getItem(i).getItem() == MillItems.DENIER_ARGENT.get()) {
-                    argent += player.getInventory().getItem(i).getCount();
+                else if(slot.getItem() == MillItems.DENIER_ARGENT.get()) {
+                    argent += slot.getCount();
+                    player.getInventory().removeItem(i, slot.getCount());
                 }
                 // if stack is denier or
-                else if(player.getInventory().getItem(i).getItem() == MillItems.DENIER_OR.get()) {
-                    or += player.getInventory().getItem(i).getCount();
+                else if(slot.getItem() == MillItems.DENIER_OR.get()) {
+                    or += slot.getCount();
+                    player.getInventory().removeItem(i, slot.getCount());
                 }
             }
-
-            CompoundTag nbt;
 
             if(!stack.hasTag())
             {
@@ -75,24 +80,6 @@ public class MillWalletItem extends Item {
             nbt.putInt("Denier", denier);
             nbt.putInt("DenierArgent", argent);
             nbt.putInt("DenierOr", or);
-
-            // remove denier from inventory
-            for(int i = 0; i < player.getInventory().getContainerSize(); i++)
-            {
-                player.getInventory().getItem(i);
-                // if stack is denier
-                if(player.getInventory().getItem(i).getItem() == MillItems.DENIER.get()) {
-                    player.getInventory().removeItem(i, player.getInventory().getItem(i).getCount());
-                }
-                // if stack is denier argent
-                else if(player.getInventory().getItem(i).getItem() == MillItems.DENIER_ARGENT.get()) {
-                    player.getInventory().removeItem(i, player.getInventory().getItem(i).getCount());
-                }
-                // if stack is denier or
-                else if(player.getInventory().getItem(i).getItem() == MillItems.DENIER_OR.get()) {
-                    player.getInventory().removeItem(i, player.getInventory().getItem(i).getCount());
-                }
-            }
         }
     }
 
@@ -100,17 +87,15 @@ public class MillWalletItem extends Item {
         if(stack.hasTag())
         {
             CompoundTag nbt = stack.getTag();
-
             if(nbt.contains("DenierOr") && nbt.getInt("DenierOr") > 0) {
-                ItemStack or = new ItemStack(MillItems.DENIER_OR.get(), nbt.getInt("DenierOr"), nbt);
-                player.getInventory().add(or);
+                player.getInventory().add(new ItemStack(MillItems.DENIER_OR.get(), nbt.getInt("DenierOr")));
             }
             if(nbt.contains("DenierArgent") && nbt.getInt("DenierArgent") > 0) {
-                ItemStack argent = new ItemStack(MillItems.DENIER_ARGENT.get(), nbt.getInt("DenierArgent"), nbt);
+                ItemStack argent = new ItemStack(MillItems.DENIER_ARGENT.get(), nbt.getInt("DenierArgent"));
                 player.getInventory().add(argent);
             }
             if(nbt.contains("Denier") && nbt.getInt("Denier") > 0) {
-                ItemStack denier = new ItemStack(MillItems.DENIER.get(), nbt.getInt("Denier"), nbt);
+                ItemStack denier = new ItemStack(MillItems.DENIER.get(), nbt.getInt("Denier"));
                 player.getInventory().add(denier);
             }
 
