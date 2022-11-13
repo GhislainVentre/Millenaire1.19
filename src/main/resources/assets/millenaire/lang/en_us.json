@@ -1,0 +1,127 @@
+{
+  "item.millenaire.denier": "Denier",
+  "item.millenaire.denier_argent": "Denier d'argent",
+  "item.millenaire.denier_or": "Denier d'or",
+
+  "item.millenaire.silk": "Silk",
+  "item.millenaire.obsidian_flake": "Obsidian Flake",
+  "item.millenaire.unknown_powder": "Unknown Powder",
+
+  "item.millenaire.wool_clothes": "Wool Clothes",
+  "item.millenaire.silk_clothes": "Silk Clothes",
+
+  "item.millenaire.galianite_dust": "Galianite Dust",
+
+  "item.millenaire.turmeric": "Turmeric",
+  "item.millenaire.rice": "Rice",
+  "item.millenaire.maize": "Maize",
+  "item.millenaire.grapes": "Grapes",
+
+  "item.millenaire.cider_apple": "Cider Apple",
+  "item.millenaire.cider": "Cider",
+  "item.millenaire.calva": "Calva",
+  "item.millenaire.tripes": "Tripes",
+  "item.millenaire.boudin_noir": "Boudin Noir",
+
+  "item.millenaire.veg_curry": "Vegetable Curry",
+  "item.millenaire.murgh_curry": "Murgh Curry",
+  "item.millenaire.rasgulla": "Rasgulla",
+
+  "item.millenaire.cacauhaa": "Cacauhaa",
+  "item.millenaire.masa": "Masa",
+  "item.millenaire.wah": "Wah",
+
+  "item.millenaire.wine": "Wine",
+  "item.millenaire.malvasia_wine": "Malvasia Wine",
+  "item.millenaire.feta": "Feta",
+  "item.millenaire.souvlaki": "Souvlaki",
+
+  "item.millenaire.sake": "Sake",
+  "item.millenaire.udon": "Udon",
+  "item.millenaire.ikayaki": "Ikayaki",
+
+  "item.millenaire.norman_helmet": "Norman Helmet",
+  "item.millenaire.norman_chestplate": "Norman Chestplate",
+  "item.millenaire.norman_leggings": "Norman Leggings",
+  "item.millenaire.norman_boots": "Norman Boots",
+
+  "item.millenaire.byzantine_helmet": "Byzantine Helmet",
+  "item.millenaire.byzantine_chestplate": "Byzantine Chestplate",
+  "item.millenaire.byzantine_leggings": "Byzantine Leggings",
+  "item.millenaire.byzantine_boots": "Byzantine Boots",
+
+  "item.millenaire.japanese_guard_helmet": "Japanese Guard Helmet",
+  "item.millenaire.japanese_guard_chestplate": "Japanese Guard Chestplate",
+  "item.millenaire.japanese_guard_leggings": "Japanese Guard Leggings",
+  "item.millenaire.japanese_guard_boots": "Japanese Guard Boots",
+
+  "item.millenaire.japanese_blue_helmet": "Japanese Blue Helmet",
+  "item.millenaire.japanese_blue_chestplate": "Japanese Blue Chestplate",
+  "item.millenaire.japanese_blue_leggings": "Japanese Blue Leggings",
+  "item.millenaire.japanese_blue_boots": "Japanese Blue Boots",
+
+  "item.millenaire.japanese_red_helmet": "Japanese Red Helmet",
+  "item.millenaire.japanese_red_chestplate": "Japanese Red Chestplate",
+  "item.millenaire.japanese_red_leggings": "Japanese Red Leggings",
+  "item.millenaire.japanese_red_boots": "Japanese Red Boots",
+
+  "item.millenaire.mayan_quest_crown": "Mayan Quest Crown",
+
+  "item.millenaire.wand_summoning": "Summoning Wand",
+  "item.millenaire.wand_negation": "Negation Wand",
+  "item.millenaire.wand_creative": "Creative Wand",
+  "item.millenaire.tuning_fork": "Tuning Fork",
+
+  "item.millenaire.norman_axe": "Norman Axe",
+  "item.millenaire.norman_shovel": "Norman Shovel",
+  "item.millenaire.norman_sword": "Norman Sword",
+  "item.millenaire.norman_hoe": "Norman Hoe",
+  "item.millenaire.norman_pickaxe": "Norman Pickaxe",
+
+  "item.millenaire.mayan_axe": "Mayan Axe",
+  "item.millenaire.mayan_shovel": "Mayan Shovel",
+  "item.millenaire.mayan_sword": "Mayan Sword",
+  "item.millenaire.mayan_hoe": "Mayan Hoe",
+  "item.millenaire.mayan_pickaxe": "Mayan Pickaxe",
+
+  "item.millenaire.byzantine_mace": "Byzantine Mace",
+
+  "item.millenaire.japanese_sword": "Japanese Sword",
+  "item.millenaire.japanese_bow": "Japanese Bow",
+
+  "item.millenaire.amulet_skoll_hati": "Amulet of Skoll Hati",
+  "item.millenaire.amulet_yggdrasil": "Amulet of Yggdrasil",
+  "item.millenaire.amulet_alchemist": "Amulet of the Alchemist",
+  "item.millenaire.amulet_vishnu": "Amulet of Vishnu",
+
+  "item.millenaire.purse": "Purse",
+
+  "item.millenaire.mill_sign": "Sign",
+
+  "item.millenaire.norman_villager_parchment": "Norman Villager Parchment",
+  "item.millenaire.norman_building_parchment": "Norman Building Parchment",
+  "item.millenaire.norman_item_parchment": "Norman Item Parchment",
+  "item.millenaire.norman_all_parchment": "Norman All Parchment",
+
+  "item.millenaire.byzantine_villager_parchment": "Byzantine Villager Parchment",
+  "item.millenaire.byzantine_building_parchment": "Byzantine Building Parchment",
+  "item.millenaire.byzantine_item_parchment": "Byzantine Item Parchment",
+  "item.millenaire.byzantine_all_parchment": "Byzantine All Parchment",
+
+  "item.millenaire.hindi_villager_parchment": "Hindi Villager Parchment",
+  "item.millenaire.hindi_building_parchment": "Hindi Building Parchment",
+  "item.millenaire.hindi_item_parchment": "Hindi Item Parchment",
+  "item.millenaire.hindi_all_parchment": "Hindi All Parchment",
+
+  "item.millenaire.mayan_villager_parchment": "Mayan Villager Parchment",
+  "item.millenaire.mayan_building_parchment": "Mayan Building Parchment",
+  "item.millenaire.mayan_item_parchment": "Mayan Item Parchment",
+  "item.millenaire.mayan_all_parchment": "Mayan All Parchment",
+
+  "item.millenaire.japanese_villager_parchment": "Japanese Villager Parchment",
+  "item.millenaire.japanese_building_parchment": "Japanese Building Parchment",
+  "item.millenaire.japanese_item_parchment": "Japanese Item Parchment",
+  "item.millenaire.japanese_all_parchment": "Japanese All Parchment",
+
+  "itemGroup.MillTab": "Millenaire"
+}
