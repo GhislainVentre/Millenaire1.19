@@ -1,4 +1,4 @@
-package com.magistis.millenaire.item.custom;
+package com.magistis.millenaire.item;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -6,7 +6,7 @@ import net.minecraft.world.food.FoodProperties;
 
 import java.util.function.Supplier;
 
-public class MillFoodsItem {
+public class MillFoods {
 
     private static final Supplier<MobEffectInstance> RCIDER = () -> new MobEffectInstance(MobEffects.REGENERATION, 15*20, 0);
     private static final Supplier<MobEffectInstance> RCALVA = () -> new MobEffectInstance(MobEffects.REGENERATION, 30*20, 0);

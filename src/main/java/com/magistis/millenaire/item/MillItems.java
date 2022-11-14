@@ -1,10 +1,13 @@
 package com.magistis.millenaire.item;
 
 import com.magistis.millenaire.Millenaire;
-import com.magistis.millenaire.item.custom.MillAmuletItem;
-import com.magistis.millenaire.item.custom.MillFoodsItem;
-import com.magistis.millenaire.item.custom.MillWalletItem;
-import net.minecraft.world.item.Item;
+import com.magistis.millenaire.item.custom.MillAmuletsItem;
+import com.magistis.millenaire.item.custom.MillArmorMaterial;
+import com.magistis.millenaire.item.custom.MillMayanQuestCrownItem;
+import com.magistis.millenaire.item.custom.MillWalletsItem;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -34,55 +37,55 @@ public class MillItems {
     public static final RegistryObject<Item> MAIZE = ITEMS.register("maize", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> CIDER_APPLE = ITEMS.register("cider_apple", () -> new Item(new Item.Properties().food(MillFoodsItem.CIDER_APPLE).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> CIDER = ITEMS.register("cider", () -> new Item(new Item.Properties().food(MillFoodsItem.CIDER).stacksTo(1).durability(10).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> CALVA = ITEMS.register("calva", () -> new Item(new Item.Properties().food(MillFoodsItem.CALVA).stacksTo(1).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> TRIPES = ITEMS.register("tripes", () -> new Item(new Item.Properties().food(MillFoodsItem.TRIPES).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> BOUDIN_NOIR = ITEMS.register("boudin_noir", () -> new Item(new Item.Properties().food(MillFoodsItem.BOUDIN_NOIR).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> CIDER_APPLE = ITEMS.register("cider_apple", () -> new Item(new Item.Properties().food(MillFoods.CIDER_APPLE).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> CIDER = ITEMS.register("cider", () -> new Item(new Item.Properties().food(MillFoods.CIDER).stacksTo(1).durability(10).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> CALVA = ITEMS.register("calva", () -> new Item(new Item.Properties().food(MillFoods.CALVA).stacksTo(1).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> TRIPES = ITEMS.register("tripes", () -> new Item(new Item.Properties().food(MillFoods.TRIPES).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> BOUDIN_NOIR = ITEMS.register("boudin_noir", () -> new Item(new Item.Properties().food(MillFoods.BOUDIN_NOIR).tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> VEG_CURRY = ITEMS.register("veg_curry", () -> new Item(new Item.Properties().food(MillFoodsItem.VEG_CURRY).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> MURGH_CURRY = ITEMS.register("murgh_curry", () -> new Item(new Item.Properties().food(MillFoodsItem.MURGH_CURRY).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> RASGULLA = ITEMS.register("rasgulla", () -> new Item(new Item.Properties().food(MillFoodsItem.RASGULLA).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> VEG_CURRY = ITEMS.register("veg_curry", () -> new Item(new Item.Properties().food(MillFoods.VEG_CURRY).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MURGH_CURRY = ITEMS.register("murgh_curry", () -> new Item(new Item.Properties().food(MillFoods.MURGH_CURRY).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> RASGULLA = ITEMS.register("rasgulla", () -> new Item(new Item.Properties().food(MillFoods.RASGULLA).tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> CACAUHAA = ITEMS.register("cacauhaa", () -> new Item(new Item.Properties().food(MillFoodsItem.CACAUHAA).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> MASA = ITEMS.register("masa", () -> new Item(new Item.Properties().food(MillFoodsItem.MASA).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> WAH = ITEMS.register("wah", () -> new Item(new Item.Properties().food(MillFoodsItem.WAH).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> CACAUHAA = ITEMS.register("cacauhaa", () -> new Item(new Item.Properties().food(MillFoods.CACAUHAA).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MASA = ITEMS.register("masa", () -> new Item(new Item.Properties().food(MillFoods.MASA).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> WAH = ITEMS.register("wah", () -> new Item(new Item.Properties().food(MillFoods.WAH).tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> WINE = ITEMS.register("wine", () -> new Item(new Item.Properties().food(MillFoodsItem.WINE).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> MALSAVIA_WINE = ITEMS.register("malvasia_wine", () -> new Item(new Item.Properties().food(MillFoodsItem.MALSAVIA_WINE).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> FETA = ITEMS.register("feta", () -> new Item(new Item.Properties().food(MillFoodsItem.FETA).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> SOUVLAKI = ITEMS.register("souvlaki", () -> new Item(new Item.Properties().food(MillFoodsItem.SOUVLAKI).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> WINE = ITEMS.register("wine", () -> new Item(new Item.Properties().food(MillFoods.WINE).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MALSAVIA_WINE = ITEMS.register("malvasia_wine", () -> new Item(new Item.Properties().food(MillFoods.MALSAVIA_WINE).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> FETA = ITEMS.register("feta", () -> new Item(new Item.Properties().food(MillFoods.FETA).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> SOUVLAKI = ITEMS.register("souvlaki", () -> new Item(new Item.Properties().food(MillFoods.SOUVLAKI).tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> SAKE = ITEMS.register("sake", () -> new Item(new Item.Properties().food(MillFoodsItem.SAKE).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> UDON = ITEMS.register("udon", () -> new Item(new Item.Properties().food(MillFoodsItem.UDON).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> IKAYAKI = ITEMS.register("ikayaki", () -> new Item(new Item.Properties().food(MillFoodsItem.IKAYAKI).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> SAKE = ITEMS.register("sake", () -> new Item(new Item.Properties().food(MillFoods.SAKE).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> UDON = ITEMS.register("udon", () -> new Item(new Item.Properties().food(MillFoods.UDON).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> IKAYAKI = ITEMS.register("ikayaki", () -> new Item(new Item.Properties().food(MillFoods.IKAYAKI).tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> NORMAN_HELMET = ITEMS.register("norman_helmet", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> NORMAN_CHESTPLATE = ITEMS.register("norman_chestplate", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> NORMAN_LEGGINGS = ITEMS.register("norman_leggings", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> NORMAN_BOOTS = ITEMS.register("norman_boots", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_HELMET = ITEMS.register("norman_helmet", () -> new ArmorItem(MillArmorMaterials.NORMAN, EquipmentSlot.HEAD, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_CHESTPLATE = ITEMS.register("norman_chestplate", () -> new ArmorItem(MillArmorMaterials.NORMAN, EquipmentSlot.CHEST, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_LEGGINGS = ITEMS.register("norman_leggings", () -> new ArmorItem(MillArmorMaterials.NORMAN, EquipmentSlot.LEGS, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_BOOTS = ITEMS.register("norman_boots", () -> new ArmorItem(MillArmorMaterials.NORMAN, EquipmentSlot.FEET, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> BYZANTINE_HELMET = ITEMS.register("byzantine_helmet", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> BYZANTINE_CHESTPLATE = ITEMS.register("byzantine_chestplate", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> BYZANTINE_LEGGINGS = ITEMS.register("byzantine_leggings", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> BYZANTINE_BOOTS = ITEMS.register("byzantine_boots", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> BYZANTINE_HELMET = ITEMS.register("byzantine_helmet", () -> new ArmorItem(MillArmorMaterials.BYZANTINE, EquipmentSlot.HEAD, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> BYZANTINE_CHESTPLATE = ITEMS.register("byzantine_chestplate", () -> new ArmorItem(MillArmorMaterials.BYZANTINE, EquipmentSlot.CHEST, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> BYZANTINE_LEGGINGS = ITEMS.register("byzantine_leggings", () -> new ArmorItem(MillArmorMaterials.BYZANTINE, EquipmentSlot.LEGS, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> BYZANTINE_BOOTS = ITEMS.register("byzantine_boots", () -> new ArmorItem(MillArmorMaterials.BYZANTINE, EquipmentSlot.FEET, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> JAPANESE_GUARD_HELMET = ITEMS.register("japanese_guard_helmet", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_GUARD_CHESTPLATE = ITEMS.register("japanese_guard_chestplate", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_GUARD_LEGGINGS = ITEMS.register("japanese_guard_leggings", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_GUARD_BOOTS = ITEMS.register("japanese_guard_boots", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_GUARD_HELMET = ITEMS.register("japanese_guard_helmet", () -> new ArmorItem(MillArmorMaterials.JAPANESE_GUARD, EquipmentSlot.HEAD, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_GUARD_CHESTPLATE = ITEMS.register("japanese_guard_chestplate", () -> new ArmorItem(MillArmorMaterials.JAPANESE_GUARD, EquipmentSlot.CHEST, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_GUARD_LEGGINGS = ITEMS.register("japanese_guard_leggings", () -> new ArmorItem(MillArmorMaterials.JAPANESE_GUARD, EquipmentSlot.LEGS, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_GUARD_BOOTS = ITEMS.register("japanese_guard_boots", () -> new ArmorItem(MillArmorMaterials.JAPANESE_GUARD, EquipmentSlot.FEET, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> JAPANESE_BLUE_HELMET = ITEMS.register("japanese_blue_helmet", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_BLUE_CHESTPLATE = ITEMS.register("japanese_blue_chestplate", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_BLUE_LEGGINGS = ITEMS.register("japanese_blue_leggings", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_BLUE_BOOTS = ITEMS.register("japanese_blue_boots", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_BLUE_HELMET = ITEMS.register("japanese_blue_helmet", () -> new ArmorItem(MillArmorMaterials.JAPANESE_BLUE, EquipmentSlot.HEAD, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_BLUE_CHESTPLATE = ITEMS.register("japanese_blue_chestplate", () -> new ArmorItem(MillArmorMaterials.JAPANESE_BLUE, EquipmentSlot.CHEST, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_BLUE_LEGGINGS = ITEMS.register("japanese_blue_leggings", () -> new ArmorItem(MillArmorMaterials.JAPANESE_BLUE, EquipmentSlot.LEGS, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_BLUE_BOOTS = ITEMS.register("japanese_blue_boots", () -> new ArmorItem(MillArmorMaterials.JAPANESE_BLUE, EquipmentSlot.FEET, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> JAPANESE_RED_HELMET = ITEMS.register("japanese_red_helmet", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_RED_CHESTPLATE = ITEMS.register("japanese_red_chestplate", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_RED_LEGGINGS = ITEMS.register("japanese_red_leggings", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_RED_BOOTS = ITEMS.register("japanese_red_boots", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_RED_HELMET = ITEMS.register("japanese_red_helmet", () -> new ArmorItem(MillArmorMaterials.JAPANESE_RED, EquipmentSlot.HEAD, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_RED_CHESTPLATE = ITEMS.register("japanese_red_chestplate", () -> new ArmorItem(MillArmorMaterials.JAPANESE_RED, EquipmentSlot.CHEST, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_RED_LEGGINGS = ITEMS.register("japanese_red_leggings", () -> new ArmorItem(MillArmorMaterials.JAPANESE_RED, EquipmentSlot.LEGS, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_RED_BOOTS = ITEMS.register("japanese_red_boots", () -> new ArmorItem(MillArmorMaterials.JAPANESE_RED, EquipmentSlot.FEET, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> MAYAN_QUEST_CROWN = ITEMS.register("mayan_quest_crown", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MAYAN_QUEST_CROWN = ITEMS.register("mayan_quest_crown", () -> new MillMayanQuestCrownItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Wands
     public static final RegistryObject<Item> WAND_SUMMONING = ITEMS.register("wand_summoning", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
@@ -91,31 +94,31 @@ public class MillItems {
     public static final RegistryObject<Item> TUNING_FORK = ITEMS.register("tuning_fork", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Tools
-    public static final RegistryObject<Item> NORMAN_AXE = ITEMS.register("norman_axe", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> NORMAN_SHOVEL = ITEMS.register("norman_shovel", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> NORMAN_PICKAXE = ITEMS.register("norman_pickaxe", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> NORMAN_HOE = ITEMS.register("norman_hoe", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> NORMAN_SWORD = ITEMS.register("norman_sword", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_AXE = ITEMS.register("norman_axe", () -> new AxeItem(MillTiers.NORMAN, 1f, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_SHOVEL = ITEMS.register("norman_shovel", () -> new ShovelItem(MillTiers.NORMAN, 1f, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_PICKAXE = ITEMS.register("norman_pickaxe", () -> new PickaxeItem(MillTiers.NORMAN, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_HOE = ITEMS.register("norman_hoe", () -> new HoeItem(MillTiers.NORMAN, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_SWORD = ITEMS.register("norman_sword", () -> new SwordItem(MillTiers.NORMAN, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> MAYAN_AXE = ITEMS.register("mayan_axe", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> MAYAN_SHOVEL = ITEMS.register("mayan_shovel", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> MAYAN_PICKAXE = ITEMS.register("mayan_pickaxe", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> MAYAN_HOE = ITEMS.register("mayan_hoe", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> MAYAN_MACE = ITEMS.register("mayan_mace", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MAYAN_AXE = ITEMS.register("mayan_axe", () -> new AxeItem(MillTiers.OBSIDIAN, 1f, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MAYAN_SHOVEL = ITEMS.register("mayan_shovel", () -> new ShovelItem(MillTiers.OBSIDIAN, 1f, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MAYAN_PICKAXE = ITEMS.register("mayan_pickaxe", () -> new PickaxeItem(MillTiers.OBSIDIAN, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MAYAN_HOE = ITEMS.register("mayan_hoe", () -> new HoeItem(MillTiers.OBSIDIAN, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> MAYAN_MACE = ITEMS.register("mayan_mace", () -> new SwordItem(MillTiers.OBSIDIAN, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> BYZANTINE_MACE = ITEMS.register("byzantine_mace", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> BYZANTINE_MACE = ITEMS.register("byzantine_mace", () -> new SwordItem(Tiers.IRON, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    public static final RegistryObject<Item> JAPANESE_SWORD = ITEMS.register("japanese_sword", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> JAPANESE_BOW = ITEMS.register("japanese_bow", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_SWORD = ITEMS.register("japanese_sword", () -> new SwordItem(Tiers.IRON, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> JAPANESE_BOW = ITEMS.register("japanese_bow", () -> new BowItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Amulets
-    public static final RegistryObject<Item> AMULET_SKOLLHATI = ITEMS.register("amulet_skoll_hati", () -> new MillAmuletItem(new Item.Properties().durability(10).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> AMULET_SKOLLHATI = ITEMS.register("amulet_skoll_hati", () -> new MillAmuletsItem(new Item.Properties().durability(10).tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> AMULET_YGGDRASIL = ITEMS.register("amulet_yggdrasil", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> AMULET_ALCHEMIST = ITEMS.register("amulet_alchemist", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> AMULET_VISHNU = ITEMS.register("amulet_vishnu", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Wallet
-    public static final RegistryObject<Item> ITEM_MILL_PURSE = ITEMS.register("mill_purse", () -> new MillWalletItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> ITEM_MILL_PURSE = ITEMS.register("mill_purse", () -> new MillWalletsItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB).stacksTo(1)));
 
     //Sign
     public static final RegistryObject<Item> ITEM_MILL_SIGN = ITEMS.register("mill_sign", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
