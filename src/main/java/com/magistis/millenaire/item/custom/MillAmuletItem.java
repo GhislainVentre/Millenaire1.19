@@ -1,7 +1,8 @@
-package com.magistis.millenaire.item;
+package com.magistis.millenaire.item.custom;
 
 import com.magistis.millenaire.Millenaire;
 
+import com.magistis.millenaire.item.MillItems;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;

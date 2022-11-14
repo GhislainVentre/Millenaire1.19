@@ -13,7 +13,7 @@
     "show_toast": true,
     "announce_to_chat": true
   },
-  "parent": "millenaire:millenaire",
+  "parent": "millenaire:first_contact",
   "criteria": {
     "requirement": {
       "trigger": "minecraft:inventory_changed",

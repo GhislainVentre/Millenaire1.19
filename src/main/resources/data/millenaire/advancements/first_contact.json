@@ -1,11 +1,11 @@
 {
-  "parent": "millenaire:cresus",
+  "parent": "millenaire:millenaire",
   "criteria": {
-    "wand_summoning": {
+    "first_contact": {
       "conditions": {
         "item": {
           "items": [
-            "millenaire:wand_summoning"
+            "millenaire:denier"
           ]
         }
       },
@@ -14,23 +14,22 @@
   },
   "display": {
     "title": {
-      "translate": "advancements.wand_summoning.title"
+      "translate": "advancements.first_contact.title"
     },
     "description": {
-      "translate": "advancements.wand_summoning.description"
+      "translate": "advancements.first_contact.description"
     },
     "announce_to_chat": true,
     "frame": "task",
     "hidden": false,
     "icon": {
-      "item": "millenaire:wand_summoning"
+      "item": "millenaire:denier"
     },
     "show_toast": true
   },
   "requirements": [
     [
-      "wand_summoning",
-      "cresus"
+      "first_contact"
     ]
   ]
 }

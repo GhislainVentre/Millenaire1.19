@@ -1,5 +1,5 @@
 {
-  "parent": "millenaire:cresus",
+  "parent": "millenaire:first_contact",
   "criteria": {
     "cresus": {
       "conditions": {
@@ -29,7 +29,8 @@
   },
   "requirements": [
     [
-      "cresus"
+      "cresus",
+      "first_contact"
     ]
   ]
 }

@@ -1,8 +1,9 @@
-package com.magistis.millenaire.item;
+package com.magistis.millenaire.item.custom;
 
 //import com.magistis.millenaire.Millenaire;
 import com.magistis.millenaire.CommonUtilities;
 
+import com.magistis.millenaire.item.MillItems;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -26,7 +27,7 @@ public class MillWalletItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         //TODO correct this
         ItemStack itemStack = player.getItemInHand(hand);
-        if(level.isClientSide() && InteractionHand.MAIN_HAND == hand) {
+        if((!level.isClientSide()) && InteractionHand.MAIN_HAND == hand) {
             // if denier in inventory, add to wallet
             if(player.getInventory().contains(new ItemStack(MillItems.DENIER.get())) || player.getInventory().contains(new ItemStack(MillItems.DENIER_ARGENT.get())) || player.getInventory().contains(new ItemStack(MillItems.DENIER_OR.get()))) {
                 addDenierToWallet(itemStack, player);

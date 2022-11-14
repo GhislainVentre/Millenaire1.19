@@ -1,6 +1,9 @@
 package com.magistis.millenaire.item;
 
 import com.magistis.millenaire.Millenaire;
+import com.magistis.millenaire.item.custom.MillAmuletItem;
+import com.magistis.millenaire.item.custom.MillFoodsItem;
+import com.magistis.millenaire.item.custom.MillWalletItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
