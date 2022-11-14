@@ -24,7 +24,7 @@ public class MillWalletItem extends Item {
     @ParametersAreNonnullByDefault
     @MethodsReturnNonnullByDefault
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-
+        //TODO correct this
         ItemStack itemStack = player.getItemInHand(hand);
         if(level.isClientSide() && InteractionHand.MAIN_HAND == hand) {
             // if denier in inventory, add to wallet
