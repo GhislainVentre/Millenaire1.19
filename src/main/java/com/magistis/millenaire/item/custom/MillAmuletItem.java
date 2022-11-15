@@ -86,6 +86,19 @@ public class MillAmuletItem extends Item {
                 vis_score = this.score_max;
         }
 
+        if(this == MillItems.AMULET_YGGDRASIL.get()) {
+            Vec3 vec = entity.getEyePosition();
+
+            if(vec.y >= 255) {
+                vis_score = this.score_max;
+            } else if(vec.y <= -64) {
+                vis_score = 0;
+            } else {
+                vis_score = Mth.floor((vec.y + 64) * 100 / 319);
+            }
+
+        }
+
         CompoundTag nbt;
         if(stack.getTag() == null)
             nbt = new CompoundTag();
