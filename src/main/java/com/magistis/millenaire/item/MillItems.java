@@ -1,13 +1,11 @@
 package com.magistis.millenaire.item;
 
 import com.magistis.millenaire.Millenaire;
-import com.magistis.millenaire.item.custom.MillAmuletsItem;
-import com.magistis.millenaire.item.custom.MillArmorMaterial;
+import com.magistis.millenaire.item.custom.MillAmuletItem;
 import com.magistis.millenaire.item.custom.MillMayanQuestCrownItem;
-import com.magistis.millenaire.item.custom.MillWalletsItem;
+import com.magistis.millenaire.item.custom.MillWalletItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
-import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -112,13 +110,13 @@ public class MillItems {
     public static final RegistryObject<Item> JAPANESE_BOW = ITEMS.register("japanese_bow", () -> new BowItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Amulets
-    public static final RegistryObject<Item> AMULET_SKOLLHATI = ITEMS.register("amulet_skoll_hati", () -> new MillAmuletsItem(new Item.Properties().durability(10).tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> AMULET_YGGDRASIL = ITEMS.register("amulet_yggdrasil", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> AMULET_ALCHEMIST = ITEMS.register("amulet_alchemist", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> AMULET_VISHNU = ITEMS.register("amulet_vishnu", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> AMULET_SKOLLHATI = ITEMS.register("amulet_skoll_hati", () -> new MillAmuletItem(new Item.Properties().durability(100).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> AMULET_YGGDRASIL = ITEMS.register("amulet_yggdrasil", () -> new MillAmuletItem(new Item.Properties().durability(100).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> AMULET_ALCHEMIST = ITEMS.register("amulet_alchemist", () -> new MillAmuletItem(new Item.Properties().durability(100).tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> AMULET_VISHNU = ITEMS.register("amulet_vishnu", () -> new MillAmuletItem(new Item.Properties().durability(100).tab(MillCreativeModeTab.MILL_TAB)));
 
     //Wallet
-    public static final RegistryObject<Item> ITEM_MILL_PURSE = ITEMS.register("mill_purse", () -> new MillWalletsItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB).stacksTo(1)));
+    public static final RegistryObject<Item> ITEM_MILL_PURSE = ITEMS.register("mill_purse", () -> new MillWalletItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB).stacksTo(1)));
 
     //Sign
     public static final RegistryObject<Item> ITEM_MILL_SIGN = ITEMS.register("mill_sign", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));

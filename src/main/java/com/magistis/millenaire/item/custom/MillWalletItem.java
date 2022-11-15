@@ -15,9 +15,9 @@ import net.minecraft.nbt.CompoundTag;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-public class MillWalletsItem extends Item {
+public class MillWalletItem extends Item {
     CompoundTag nbt;
-    public MillWalletsItem(Properties properties) {
+    public MillWalletItem(Properties properties) {
         super(properties);
     }
 
