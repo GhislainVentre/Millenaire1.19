@@ -1,7 +1,5 @@
 package com.magistis.millenaire.item;
 
-import com.magistis.millenaire.item.custom.MillArmorMaterial;
-
 public class MillArmorMaterials {
     public static final MillArmorMaterial NORMAN = new MillArmorMaterial("norman", 66, new int[]{3, 8, 6, 3}, 9, null, 0.0f, 0.0f, () -> null);
     public static final MillArmorMaterial JAPANESE_RED = new MillArmorMaterial("japanese_red", 33, new int[]{2, 6, 5, 2}, 25, null, 2.0f, 0.0f, () -> null);

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "millenaire:block/turmeric_crop0"
+  },
+  "render_type": "cutout"
+}

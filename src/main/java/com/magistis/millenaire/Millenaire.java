@@ -1,10 +1,14 @@
 package com.magistis.millenaire;
 
 import com.magistis.millenaire.block.MillBlocks;
+import com.magistis.millenaire.entities.MillVillagers;
 import com.magistis.millenaire.item.MillItems;
 
+import com.magistis.millenaire.util.MillItemProperties;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -34,6 +38,7 @@ public class Millenaire
 
         MillBlocks.register(modEventBus);
         MillItems.register(modEventBus);
+        MillVillagers.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -41,8 +46,9 @@ public class Millenaire
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        // Some common setup code
-        LOGGER.info("HELLO FROM COMMON SETUP");
+        event.enqueueWork(() -> {
+            MillVillagers.registerPOIs();
+        });
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
@@ -55,14 +61,13 @@ public class Millenaire
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
+
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        public static void onClientSetup(FMLClientSetupEvent event) {
+
+            MillItemProperties.addCustomProperties();
+
         }
     }
 }

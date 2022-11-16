@@ -1,5 +1,6 @@
-package com.magistis.millenaire.item.custom;
+package com.magistis.millenaire.item;
 
+import com.magistis.millenaire.Millenaire;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ArmorMaterial;
@@ -47,7 +48,7 @@ public record MillArmorMaterial(String name, int durability, int[] defense, int 
 
     @Override
     public String getName() {
-        return this.name;
+        return Millenaire.MOD_ID + ":" + name;
     }
 
     @Override

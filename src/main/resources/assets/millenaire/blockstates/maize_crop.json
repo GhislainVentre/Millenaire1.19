@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "age=0": { "model":  "millenaire:block/maize_crop0", "render_type": "cutout"},
+    "age=1": { "model":  "millenaire:block/maize_crop1", "render_type": "cutout"}
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "millenaire:item/japanese_bow",
+    "textures": {
+        "layer0": "millenaire:item/japanese_bow_pull3"
+    }
+}

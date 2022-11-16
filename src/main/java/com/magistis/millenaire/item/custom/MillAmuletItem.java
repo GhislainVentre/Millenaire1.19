@@ -5,6 +5,8 @@ import com.magistis.millenaire.Millenaire;
 import com.magistis.millenaire.item.MillItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.server.commands.TimeCommand;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.Mth;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
@@ -18,6 +20,8 @@ import net.minecraft.world.phys.Vec3;
 // MinecraftServer
 
 import javax.annotation.ParametersAreNonnullByDefault;
+import java.util.List;
+import java.util.Objects;
 
 public class MillAmuletItem extends Item {
     int score_max = 100;
@@ -32,14 +36,12 @@ public class MillAmuletItem extends Item {
         if (!level.isClientSide) {
             if(this == MillItems.AMULET_SKOLLHATI.get()) {
                 Millenaire.LOGGER.info("Skollhati amulet used");
-                long time = level.getDayTime();
+                long time = level.getDayTime() + 24000L;
+
                 if (time % 24000L > 11000L && time % 24000L < 23500L) {
-                    Millenaire.LOGGER.info("time1 = " + time);
-                    //TODO add a way to change time
-                }
-                else {
-                    Millenaire.LOGGER.info("time2 = " + time);
-                    //TODO add a way to change time
+                    TimeCommand.setTime(level.getServer().createCommandSourceStack(), (int) (time - time % 24000L - 500L));
+                } else {
+                    TimeCommand.setTime(level.getServer().createCommandSourceStack(), (int) (time - time % 24000L + 13000L));
                 }
             }
         }
@@ -82,22 +84,38 @@ public class MillAmuletItem extends Item {
                     }
                 }
             }
-            if(vis_score > this.score_max)
-                vis_score = this.score_max;
+        }
+
+        if(this == MillItems.AMULET_VISHNU.get() && entity instanceof Player) {
+            int radius = 20;
+            Vec3 vec = entity.getEyePosition();
+            List<Player> other_players = level.getEntitiesOfClass(Player.class, entity.getBoundingBox().inflate(radius));
+            for(int i = 0; i < other_players.size(); i++) {
+                Player other_player = other_players.get(i);
+                if(other_player != entity) {
+                    Vec3 other_vec = other_player.getEyePosition();
+                    int distance = (int) other_vec.distanceTo(vec);
+                    if(distance <= radius) {
+                        vis_score += (radius - distance) * 5;
+                    }
+                }
+            }
         }
 
         if(this == MillItems.AMULET_YGGDRASIL.get()) {
             Vec3 vec = entity.getEyePosition();
 
             if(vec.y >= 255) {
-                vis_score = this.score_max;
-            } else if(vec.y <= -64) {
                 vis_score = 0;
+            } else if(vec.y <= -64) {
+                vis_score = this.score_max;
             } else {
-                vis_score = Mth.floor((vec.y + 64) * 100 / 319);
+                vis_score = Mth.floor((255 - vec.y) * 100 / 319);
             }
-
         }
+
+        if(vis_score > this.score_max)
+            vis_score = this.score_max;
 
         CompoundTag nbt;
         if(stack.getTag() == null)

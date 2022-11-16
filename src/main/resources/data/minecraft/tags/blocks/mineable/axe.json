@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-
+    "millenaire:thatch",
+    "millenaire:cross_timber_frame",
+    "millenaire:plain_timber_frame"
   ]
 }

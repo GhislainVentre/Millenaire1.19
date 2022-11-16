@@ -1,10 +1,10 @@
 package com.magistis.millenaire.item;
 
 import com.magistis.millenaire.Millenaire;
-import com.magistis.millenaire.item.custom.MillAmuletItem;
-import com.magistis.millenaire.item.custom.MillMayanQuestCrownItem;
-import com.magistis.millenaire.item.custom.MillWalletItem;
+import com.magistis.millenaire.block.MillBlocks;
+import com.magistis.millenaire.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,10 +30,10 @@ public class MillItems {
     public static final RegistryObject<Item> GALIANITE_DUST = ITEMS.register("galianite_dust", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Crops
-    public static final RegistryObject<Item> TURMERIC = ITEMS.register("turmeric", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> RICE = ITEMS.register("rice", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> MAIZE = ITEMS.register("maize", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> TURMERIC = ITEMS.register("turmeric", () -> new ItemNameBlockItem(MillBlocks.TURMERIC_CROP.get(), new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> RICE = ITEMS.register("rice", () -> new ItemNameBlockItem(MillBlocks.RICE_CROP.get(), new Item.Properties().tab(MillCreativeModeTab.MILL_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.05f).build())));
+    public static final RegistryObject<Item> MAIZE = ITEMS.register("maize", () -> new ItemNameBlockItem(MillBlocks.MAIZE_CROP.get(), new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new ItemNameBlockItem(MillBlocks.VINE_CROP.get(), new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     public static final RegistryObject<Item> CIDER_APPLE = ITEMS.register("cider_apple", () -> new Item(new Item.Properties().food(MillFoods.CIDER_APPLE).tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> CIDER = ITEMS.register("cider", () -> new Item(new Item.Properties().food(MillFoods.CIDER).stacksTo(1).durability(10).tab(MillCreativeModeTab.MILL_TAB)));
@@ -86,10 +86,10 @@ public class MillItems {
     public static final RegistryObject<Item> MAYAN_QUEST_CROWN = ITEMS.register("mayan_quest_crown", () -> new MillMayanQuestCrownItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Wands
-    public static final RegistryObject<Item> WAND_SUMMONING = ITEMS.register("wand_summoning", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> WAND_NEGATION = ITEMS.register("wand_negation", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> WAND_CREATIVE = ITEMS.register("wand_creative", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    public static final RegistryObject<Item> TUNING_FORK = ITEMS.register("tuning_fork", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> WAND_SUMMONING = ITEMS.register("wand_summoning", () -> new MillWandItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> WAND_NEGATION = ITEMS.register("wand_negation", () -> new MillWandItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> WAND_CREATIVE = ITEMS.register("wand_creative", () -> new MillWandItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> TUNING_FORK = ITEMS.register("tuning_fork", () -> new MillWandItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Tools
     public static final RegistryObject<Item> NORMAN_AXE = ITEMS.register("norman_axe", () -> new AxeItem(MillTiers.NORMAN, 1f, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
@@ -122,30 +122,30 @@ public class MillItems {
     public static final RegistryObject<Item> ITEM_MILL_SIGN = ITEMS.register("mill_sign", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Parchments
-    public static final RegistryObject<Item> NORMAN_VILLAGER_PARCHMENT = ITEMS.register("norman_villager_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> NORMAN_BUILDING_PARCHMENT = ITEMS.register("norman_building_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> NORMAN_ITEM_PARCHMENT = ITEMS.register("norman_item_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> NORMAN_ALL_PARCHMENT = ITEMS.register("norman_all_parchment", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> NORMAN_VILLAGER_PARCHMENT = ITEMS.register("norman_villager_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> NORMAN_BUILDING_PARCHMENT = ITEMS.register("norman_building_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> NORMAN_ITEM_PARCHMENT = ITEMS.register("norman_item_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> NORMAN_ALL_PARCHMENT = ITEMS.register("norman_all_parchment", () -> new MillParchmentItem(new Item.Properties()));
 
-    public static final RegistryObject<Item> BYZANTINE_VILLAGER_PARCHMENT = ITEMS.register("byzantine_villager_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BYZANTINE_BUILDING_PARCHMENT = ITEMS.register("byzantine_building_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BYZANTINE_ITEM_PARCHMENT = ITEMS.register("byzantine_item_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> BYZANTINE_ALL_PARCHMENT = ITEMS.register("byzantine_all_parchment", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> BYZANTINE_VILLAGER_PARCHMENT = ITEMS.register("byzantine_villager_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> BYZANTINE_BUILDING_PARCHMENT = ITEMS.register("byzantine_building_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> BYZANTINE_ITEM_PARCHMENT = ITEMS.register("byzantine_item_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> BYZANTINE_ALL_PARCHMENT = ITEMS.register("byzantine_all_parchment", () -> new MillParchmentItem(new Item.Properties()));
 
-    public static final RegistryObject<Item> HINDI_VILLAGER_PARCHMENT = ITEMS.register("hindi_villager_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> HINDI_BUILDING_PARCHMENT = ITEMS.register("hindi_building_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> HINDI_ITEM_PARCHMENT = ITEMS.register("hindi_item_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> HINDI_ALL_PARCHMENT = ITEMS.register("hindi_all_parchment", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HINDI_VILLAGER_PARCHMENT = ITEMS.register("hindi_villager_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> HINDI_BUILDING_PARCHMENT = ITEMS.register("hindi_building_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> HINDI_ITEM_PARCHMENT = ITEMS.register("hindi_item_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> HINDI_ALL_PARCHMENT = ITEMS.register("hindi_all_parchment", () -> new MillParchmentItem(new Item.Properties()));
 
-    public static final RegistryObject<Item> MAYAN_VILLAGER_PARCHMENT = ITEMS.register("mayan_villager_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MAYAN_BUILDING_PARCHMENT = ITEMS.register("mayan_building_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MAYAN_ITEM_PARCHMENT = ITEMS.register("mayan_item_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> MAYAN_ALL_PARCHMENT = ITEMS.register("mayan_all_parchment", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> MAYAN_VILLAGER_PARCHMENT = ITEMS.register("mayan_villager_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> MAYAN_BUILDING_PARCHMENT = ITEMS.register("mayan_building_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> MAYAN_ITEM_PARCHMENT = ITEMS.register("mayan_item_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> MAYAN_ALL_PARCHMENT = ITEMS.register("mayan_all_parchment", () -> new MillParchmentItem(new Item.Properties()));
 
-    public static final RegistryObject<Item> JAPANESE_VILLAGER_PARCHMENT = ITEMS.register("japanese_villager_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> JAPANESE_BUILDING_PARCHMENT = ITEMS.register("japanese_building_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> JAPANESE_ITEM_PARCHMENT = ITEMS.register("japanese_item_parchment", () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> JAPANESE_ALL_PARCHMENT = ITEMS.register("japanese_all_parchment", () -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> JAPANESE_VILLAGER_PARCHMENT = ITEMS.register("japanese_villager_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> JAPANESE_BUILDING_PARCHMENT = ITEMS.register("japanese_building_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> JAPANESE_ITEM_PARCHMENT = ITEMS.register("japanese_item_parchment", () -> new MillParchmentItem(new Item.Properties()));
+    public static final RegistryObject<Item> JAPANESE_ALL_PARCHMENT = ITEMS.register("japanese_all_parchment", () -> new MillParchmentItem(new Item.Properties()));
     
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

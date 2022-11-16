@@ -46,6 +46,12 @@
       "advancements.puja.title": "Puja",
       "advancements.puja.description": "Get a puja",
 
+  "entity.minecraft.village.chief": "Chief",
+
+  "block.millenaire.rice_crop": "Rice Crop",
+  "block.millenaire.maize_crop": "Maize Crop",
+  "block.millenaire.turmeric_crop": "Turmeric Crop",
+  "block.millenaire.vine_crop": "Vine Crop",
 
   "item.millenaire.denier": "Denier",
   "item.millenaire.denier_argent": "Denier d'argent",

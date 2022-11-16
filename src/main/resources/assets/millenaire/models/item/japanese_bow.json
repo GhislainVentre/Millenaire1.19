@@ -2,5 +2,34 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "millenaire:item/japanese_bow"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "minecraft:pulling": 1
+      },
+      "model": "millenaire:item/japanese_bow_pull0"
+    },
+    {
+      "predicate": {
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.1
+      },
+      "model": "millenaire:item/japanese_bow_pull1"
+    },
+    {
+      "predicate": {
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.5
+      },
+      "model": "millenaire:item/japanese_bow_pull2"
+    },
+    {
+      "predicate": {
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.8
+      },
+      "model": "millenaire:item/japanese_bow_pull3"
+    }
+  ]
 }
