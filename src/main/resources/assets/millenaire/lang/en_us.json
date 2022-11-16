@@ -53,6 +53,25 @@
   "block.millenaire.turmeric_crop": "Turmeric Crop",
   "block.millenaire.vine_crop": "Vine Crop",
 
+  "block.millenaire.gold_ornament": "Gold Ornament",
+  "block.millenaire.cross_timber_frame": "Cross Timber Frame",
+  "block.millenaire.plain_timber_frame": "Plain Timber Frame",
+  "block.millenaire.thatch": "Thatch",
+
+  "block.millenaire.alchemist_explosive": "Alchemist Explosive",
+  "block.millenaire.galianite_ore": "Galianite Ore",
+    "block.millenaire.galianite_block": "Galianite Block",
+
+  "block.millenaire.dirt_path": "Dirt Path",
+  "block.millenaire.gravel_path": "Gravel Path",
+  "block.millenaire.stone_path": "Stone Path",
+  "block.millenaire.sandstone_path": "Sandstone Path",
+  "block.millenaire.brick_path": "Brick Path",
+
+  "block.millenaire.path_slab": "Path Slab",
+
+  "item.millenaire.tutorial_book": "Tutorial Book",
+
   "item.millenaire.denier": "Denier",
   "item.millenaire.denier_argent": "Denier d'argent",
   "item.millenaire.denier_or": "Denier d'or",
@@ -61,8 +80,14 @@
   "item.millenaire.obsidian_flake": "Obsidian Flake",
   "item.millenaire.unknown_powder": "Unknown Powder",
 
-  "item.millenaire.wool_clothes": "Wool Clothes",
-  "item.millenaire.silk_clothes": "Silk Clothes",
+  "item.millenaire.wool_cloth": "Wool Cloth",
+  "item.millenaire.silk_cloth": "Silk Cloth",
+  "item.millenaire.hide": "Hide",
+  "item.millenaire.brick_mould": "Brick Mould",
+
+  "item.millenaire.norman_tapestry": "Norman Tapestry",
+  "item.millenaire.indian_statue": "Indian Statue",
+  "item.millenaire.sodding_spade": "Sodding Spade",
 
   "item.millenaire.galianite_dust": "Galianite Dust",
 
@@ -94,6 +119,9 @@
   "item.millenaire.udon": "Udon",
   "item.millenaire.ikayaki": "Ikayaki",
 
+  "item.millenaire.lamb_raw": "Raw Lamb",
+    "item.millenaire.lamb_cooked": "Cooked Lamb",
+
   "item.millenaire.norman_helmet": "Norman Helmet",
   "item.millenaire.norman_chestplate": "Norman Chestplate",
   "item.millenaire.norman_leggings": "Norman Leggings",
@@ -120,6 +148,7 @@
   "item.millenaire.japanese_red_boots": "Japanese Red Boots",
 
   "item.millenaire.mayan_quest_crown": "Mayan Quest Crown",
+  "item.millenaire.mayan_mace": "Mayan Mace",
 
   "item.millenaire.wand_summoning": "Summoning Wand",
   "item.millenaire.wand_negation": "Negation Wand",
@@ -142,6 +171,7 @@
 
   "item.millenaire.japanese_sword": "Japanese Sword",
   "item.millenaire.japanese_bow": "Japanese Bow",
+  "item.millenaire.ukkungawok": "Ukkungawok",
 
   "item.millenaire.amulet_skoll_hati": "Amulet of Skoll Hati",
   "item.millenaire.amulet_yggdrasil": "Amulet of Yggdrasil",

@@ -10,6 +10,7 @@ public class MillItemProperties extends ItemProperties {
 
     public static void addCustomProperties() {
         makeBow(MillItems.JAPANESE_BOW.get());
+        makeBow(MillItems.UKKUNGAWOK.get());
     }
 
     private static void makeBow(Item item) {

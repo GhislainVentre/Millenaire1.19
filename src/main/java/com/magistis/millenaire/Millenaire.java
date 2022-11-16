@@ -1,14 +1,11 @@
 package com.magistis.millenaire;
 
 import com.magistis.millenaire.block.MillBlocks;
-import com.magistis.millenaire.entities.MillVillagers;
+import com.magistis.millenaire.entity.MillVillagers;
 import com.magistis.millenaire.item.MillItems;
 
 import com.magistis.millenaire.util.MillItemProperties;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

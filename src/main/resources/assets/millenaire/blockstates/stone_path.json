@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "millenaire:block/stone_path"
+      },
+      {
+        "model": "millenaire:block/stone_path",
+        "y": 90
+      },
+      {
+        "model": "millenaire:block/stone_path",
+        "y": 180
+      },
+      {
+        "model": "millenaire:block/stone_path",
+        "y": 270
+      }
+    ]
+  }
+}

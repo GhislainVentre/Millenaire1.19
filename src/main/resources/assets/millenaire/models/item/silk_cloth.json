@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "millenaire:item/wool_clothes"
+    "layer0": "millenaire:item/silk_cloth"
   }
 }

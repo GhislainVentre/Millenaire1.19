@@ -20,21 +20,29 @@ public class MillItems {
     public static final RegistryObject<Item> DENIER_OR = ITEMS.register("denier_or", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> DENIER_ARGENT = ITEMS.register("denier_argent", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
+    public static final RegistryObject<Item> TUTORIAL_BOOK = ITEMS.register("tutorial_book", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+
     public static final RegistryObject<Item> SILK = ITEMS.register("silk", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> OBSIDIAN_FLAKE = ITEMS.register("obsidian_flake", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> UNKNOWN_POWDER = ITEMS.register("unknown_powder", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    //public static final RegistryObject<Item> WOOL_CLOTHES = ITEMS.register("wool_clothes", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
-    //public static final RegistryObject<Item> SILK_CLOTHES = ITEMS.register("silk_clothes", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> WOOL_CLOTH = ITEMS.register("wool_cloth", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> SILK_CLOTH = ITEMS.register("silk_cloth", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> HIDE = ITEMS.register("hide", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> BRICK_MOULD = ITEMS.register("brick_mould", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> NORMAN_TAPESTRY = ITEMS.register("norman_tapestry", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> INDIAN_STATUE = ITEMS.register("indian_statue", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> SODDING_SPADE = ITEMS.register("sodding_spade", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     public static final RegistryObject<Item> GALIANITE_DUST = ITEMS.register("galianite_dust", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    //Crops
+    // Crops
     public static final RegistryObject<Item> TURMERIC = ITEMS.register("turmeric", () -> new ItemNameBlockItem(MillBlocks.TURMERIC_CROP.get(), new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> RICE = ITEMS.register("rice", () -> new ItemNameBlockItem(MillBlocks.RICE_CROP.get(), new Item.Properties().tab(MillCreativeModeTab.MILL_TAB).food(new FoodProperties.Builder().nutrition(2).saturationMod(0.05f).build())));
     public static final RegistryObject<Item> MAIZE = ITEMS.register("maize", () -> new ItemNameBlockItem(MillBlocks.MAIZE_CROP.get(), new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> GRAPES = ITEMS.register("grapes", () -> new ItemNameBlockItem(MillBlocks.VINE_CROP.get(), new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
+    // Food
     public static final RegistryObject<Item> CIDER_APPLE = ITEMS.register("cider_apple", () -> new Item(new Item.Properties().food(MillFoods.CIDER_APPLE).tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> CIDER = ITEMS.register("cider", () -> new Item(new Item.Properties().food(MillFoods.CIDER).stacksTo(1).durability(10).tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> CALVA = ITEMS.register("calva", () -> new Item(new Item.Properties().food(MillFoods.CALVA).stacksTo(1).tab(MillCreativeModeTab.MILL_TAB)));
@@ -58,6 +66,10 @@ public class MillItems {
     public static final RegistryObject<Item> UDON = ITEMS.register("udon", () -> new Item(new Item.Properties().food(MillFoods.UDON).tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> IKAYAKI = ITEMS.register("ikayaki", () -> new Item(new Item.Properties().food(MillFoods.IKAYAKI).tab(MillCreativeModeTab.MILL_TAB)));
 
+    public static final RegistryObject<Item> LAMB_COOKED = ITEMS.register("lamb_cooked", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> LAMB_RAW = ITEMS.register("lamb_raw", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+
+    // Armor
     public static final RegistryObject<Item> NORMAN_HELMET = ITEMS.register("norman_helmet", () -> new ArmorItem(MillArmorMaterials.NORMAN, EquipmentSlot.HEAD, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> NORMAN_CHESTPLATE = ITEMS.register("norman_chestplate", () -> new ArmorItem(MillArmorMaterials.NORMAN, EquipmentSlot.CHEST, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> NORMAN_LEGGINGS = ITEMS.register("norman_leggings", () -> new ArmorItem(MillArmorMaterials.NORMAN, EquipmentSlot.LEGS, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
@@ -91,7 +103,7 @@ public class MillItems {
     public static final RegistryObject<Item> WAND_CREATIVE = ITEMS.register("wand_creative", () -> new MillWandItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> TUNING_FORK = ITEMS.register("tuning_fork", () -> new MillWandItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
-    //Tools
+    //Tools & Weapons
     public static final RegistryObject<Item> NORMAN_AXE = ITEMS.register("norman_axe", () -> new AxeItem(MillTiers.NORMAN, 1f, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> NORMAN_SHOVEL = ITEMS.register("norman_shovel", () -> new ShovelItem(MillTiers.NORMAN, 1f, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> NORMAN_PICKAXE = ITEMS.register("norman_pickaxe", () -> new PickaxeItem(MillTiers.NORMAN, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
@@ -108,6 +120,8 @@ public class MillItems {
 
     public static final RegistryObject<Item> JAPANESE_SWORD = ITEMS.register("japanese_sword", () -> new SwordItem(Tiers.IRON, 1, 1f, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> JAPANESE_BOW = ITEMS.register("japanese_bow", () -> new BowItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> UKKUNGAWOK = ITEMS.register("ukkungawok", () -> new BowItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> ICE_ARROW = ITEMS.register("ice_arrow", () -> new ArrowItem(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     //Amulets
     public static final RegistryObject<Item> AMULET_SKOLLHATI = ITEMS.register("amulet_skoll_hati", () -> new MillAmuletItem(new Item.Properties().durability(100).tab(MillCreativeModeTab.MILL_TAB)));

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "millenaire:block/gravel_path"
+      },
+      {
+        "model": "millenaire:block/gravel_path",
+        "y": 90
+      },
+      {
+        "model": "millenaire:block/gravel_path",
+        "y": 180
+      },
+      {
+        "model": "millenaire:block/gravel_path",
+        "y": 270
+      }
+    ]
+  }
+}

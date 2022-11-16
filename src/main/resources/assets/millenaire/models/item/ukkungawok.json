@@ -1,0 +1,28 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "millenaire:item/ukkungawok"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "minecraft:pulling": 1
+      },
+      "model": "millenaire:item/ukkungawok_pull0"
+    },
+    {
+      "predicate": {
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.5
+      },
+      "model": "millenaire:item/ukkungawok_pull1"
+    },
+    {
+      "predicate": {
+        "minecraft:pulling": 1,
+        "minecraft:pull": 0.8
+      },
+      "model": "millenaire:item/ukkungawok_pull2"
+    }
+  ]
+}

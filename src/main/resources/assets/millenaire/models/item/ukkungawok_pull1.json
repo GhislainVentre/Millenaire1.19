@@ -1,0 +1,6 @@
+{
+  "parent": "millenaire:item/ukkungawok",
+    "textures": {
+        "layer0": "millenaire:item/ukkungawok_pull1"
+    }
+}

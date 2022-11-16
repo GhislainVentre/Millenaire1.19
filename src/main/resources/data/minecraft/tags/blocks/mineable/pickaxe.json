@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "millenaire:gold_ornament"
+    "millenaire:gold_ornament",
+    "millenaire:galianite_ore",
+    "millenaire:galianite_block"
   ]
 }
