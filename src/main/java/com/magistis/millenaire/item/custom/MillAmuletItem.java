@@ -22,7 +22,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
-// MinecraftServer
+// ai
+import net.minecraft.world.entity.ai.village.VillageSiege;
+import org.jetbrains.annotations.NotNull;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 import java.util.List;
@@ -44,9 +46,9 @@ public class MillAmuletItem extends Item {
                 long time = level.getDayTime() + 24000L;
 
                 if (time % 24000L > 11000L && time % 24000L < 23500L) {
-                    TimeCommand.setTime(level.getServer().createCommandSourceStack(), (int) (time - time % 24000L - 500L));
+                    TimeCommand.setTime(Objects.requireNonNull(level.getServer()).createCommandSourceStack(), (int) (time - time % 24000L - 500L));
                 } else {
-                    TimeCommand.setTime(level.getServer().createCommandSourceStack(), (int) (time - time % 24000L + 13000L));
+                    TimeCommand.setTime(Objects.requireNonNull(level.getServer()).createCommandSourceStack(), (int) (time - time % 24000L + 13000L));
                 }
             }
         }
@@ -55,7 +57,7 @@ public class MillAmuletItem extends Item {
     }
 
     @Override
-    public void inventoryTick(ItemStack stack, Level level, Entity entity, int itemSlot, boolean isSelected) {
+    public void inventoryTick(@NotNull ItemStack stack, @NotNull Level level, @NotNull Entity entity, int itemSlot, boolean isSelected) {
 
         if(this == MillItems.AMULET_SKOLLHATI.get()) {
             return ;
@@ -95,12 +97,11 @@ public class MillAmuletItem extends Item {
             int radius = 20;
             Vec3 vec = entity.getEyePosition();
             List<Player> other_players = level.getEntitiesOfClass(Player.class, entity.getBoundingBox().inflate(radius));
-            for(int i = 0; i < other_players.size(); i++) {
-                Player other_player = other_players.get(i);
-                if(other_player != entity) {
+            for (Player other_player : other_players) {
+                if (other_player != entity) {
                     Vec3 other_vec = other_player.getEyePosition();
                     int distance = (int) other_vec.distanceTo(vec);
-                    if(distance <= radius) {
+                    if (distance <= radius) {
                         vis_score += (radius - distance) * 5;
                     }
                 }
