@@ -1,3 +1,8 @@
+/* Copyright (c) 2022, Magistis
+ * All rights reserved.
+ * Learned everything from https://www.youtube.com/c/TKaupenjoe
+ */
+
 package com.magistis.millenaire.world.feature;
 
 import com.google.common.base.Suppliers;
