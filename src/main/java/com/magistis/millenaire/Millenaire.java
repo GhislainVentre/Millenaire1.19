@@ -5,6 +5,8 @@ import com.magistis.millenaire.entity.MillVillagers;
 import com.magistis.millenaire.item.MillItems;
 
 import com.magistis.millenaire.util.MillItemProperties;
+import com.magistis.millenaire.world.feature.MillConfiguredFeatures;
+import com.magistis.millenaire.world.feature.MillPlacedFeatures;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -36,6 +38,8 @@ public class Millenaire
         MillBlocks.register(modEventBus);
         MillItems.register(modEventBus);
         MillVillagers.register(modEventBus);
+        MillConfiguredFeatures.register(modEventBus);
+        MillPlacedFeatures.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
