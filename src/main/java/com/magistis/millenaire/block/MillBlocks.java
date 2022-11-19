@@ -26,6 +26,8 @@ import java.util.function.Supplier;
 public class MillBlocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, Millenaire.MOD_ID);
 
+    public static final RegistryObject<Block> VILLAGE_STONE = BLOCKS.register("village_stone", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEDROCK)));
+
     // Crops
     public static final RegistryObject<Block> RICE_CROP = BLOCKS.register("rice_crop", () -> new MillCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT), MillCropBlock.CropType.RICE));
     public static final RegistryObject<Block> MAIZE_CROP = BLOCKS.register("maize_crop", () -> new MillCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT), MillCropBlock.CropType.MAIZE));
@@ -33,7 +35,8 @@ public class MillBlocks {
     public static final RegistryObject<Block> VINE_CROP = BLOCKS.register("vine_crop", () -> new MillCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT), MillCropBlock.CropType.GRAPES));
 
     public static final RegistryObject<Block> PAPER_WALL = registerBlock("paper_wall", () -> new Block(BlockBehaviour.Properties.of(Material.GLASS).strength(0.3F).sound(SoundType.GLASS)), MillCreativeModeTab.MILL_TAB);
-    // blocks
+
+    // Blocks
     public static final RegistryObject<Block> GOLD_ORNAMENT = registerBlock("gold_ornament", () -> new Block(BlockBehaviour.Properties.copy(Blocks.GOLD_BLOCK).requiresCorrectToolForDrops()), MillCreativeModeTab.MILL_TAB);
     // public static final RegistryObject<Block> MUD_BRICK = BLOCKS.register("mud_brick", () -> new Block(BlockBehaviour.Properties.copy(Blocks.BRICKS)));
     public static final RegistryObject<Block> THATCH = registerBlock("thatch", () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS).requiresCorrectToolForDrops()), MillCreativeModeTab.MILL_TAB);
@@ -53,7 +56,7 @@ public class MillBlocks {
 
 
     // Chest
-    public static final RegistryObject<Block> MILL_CHEST = BLOCKS.register("mill_chest", () -> new Block(BlockBehaviour.Properties.copy(Blocks.CHEST)));
+    //public static final RegistryObject<Block> MILL_CHEST = BLOCKS.register("mill_chest", () -> new ChestBlock(BlockBehaviour.Properties.copy(Blocks.CHEST), () -> TileEntities.MILL_CHEST.get()));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

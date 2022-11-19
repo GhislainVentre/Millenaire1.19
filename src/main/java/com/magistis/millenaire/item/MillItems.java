@@ -5,12 +5,14 @@
 
 package com.magistis.millenaire.item;
 
+import com.magistis.millenaire.entity.MillEntityTypes;
 import com.magistis.millenaire.Millenaire;
 import com.magistis.millenaire.block.MillBlocks;
 import com.magistis.millenaire.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.*;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,6 +28,7 @@ public class MillItems {
     public static final RegistryObject<Item> DENIER_ARGENT = ITEMS.register("denier_argent", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     public static final RegistryObject<Item> TUTORIAL_BOOK = ITEMS.register("tutorial_book", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
+    public static final RegistryObject<Item> VILLAGER_EGG = ITEMS.register("villager_egg", () -> new ForgeSpawnEggItem(MillEntityTypes.BYZANTINE_ARTISAN0, 0x000000, 0x000000, new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
 
     public static final RegistryObject<Item> SILK = ITEMS.register("silk", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));
     public static final RegistryObject<Item> OBSIDIAN_FLAKE = ITEMS.register("obsidian_flake", () -> new Item(new Item.Properties().tab(MillCreativeModeTab.MILL_TAB)));

@@ -6,13 +6,16 @@
 package com.magistis.millenaire;
 
 import com.magistis.millenaire.block.MillBlocks;
-import com.magistis.millenaire.entity.MillVillagers;
+import com.magistis.millenaire.entity.MillEntityTypes;
+import com.magistis.millenaire.entity.CustomVanillaVillagers;
+import com.magistis.millenaire.entity.client.MillVillagerRenderer;
 import com.magistis.millenaire.item.MillItems;
 
 import com.magistis.millenaire.util.MillItemProperties;
 import com.magistis.millenaire.world.feature.MillConfiguredFeatures;
 import com.magistis.millenaire.world.feature.MillPlacedFeatures;
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -42,9 +45,10 @@ public class Millenaire
 
         MillBlocks.register(modEventBus);
         MillItems.register(modEventBus);
-        MillVillagers.register(modEventBus);
+        CustomVanillaVillagers.register(modEventBus);
         MillConfiguredFeatures.register(modEventBus);
         MillPlacedFeatures.register(modEventBus);
+        MillEntityTypes.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -53,7 +57,8 @@ public class Millenaire
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
-            MillVillagers.registerPOIs();
+            CustomVanillaVillagers.registerPOIs();
+
         });
     }
 
@@ -73,6 +78,48 @@ public class Millenaire
         public static void onClientSetup(FMLClientSetupEvent event) {
 
             MillItemProperties.addCustomProperties();
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_ARTISAN0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_ARTISAN_WIFE0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_BARON0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_BARON1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_BOY0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_CENTURIO0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_CENTURIO1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FARMER0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FARMER1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FARMILLER0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FARMILLER1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FRAU0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FRAU1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FRAU2.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FRAU3.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_FRAU4.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_GIRL0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_KEEPER0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_KEEPER1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_KEEPER2.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_KEEPER3.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_LUMBERMAN0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_LUMBERMAN1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_MERCHANT0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_MINER0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_MINER1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_MINER2.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_PAPAS0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_PAPAS1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_PAPAS2.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_PATRIARCH0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_RICH_WIFE0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_SHEPARD0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_SHEPHERD_WIFE0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_SILK_SMUGGLER0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_SMITH0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_SMITH1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_SOLDIER0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_WIFE0.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_WIFE1.get(), MillVillagerRenderer::new);
+            EntityRenderers.register(MillEntityTypes.BYZANTINE_WIFE2.get(), MillVillagerRenderer::new);
+
 
         }
     }

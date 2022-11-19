@@ -9,11 +9,7 @@ import com.magistis.millenaire.item.MillItems;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
-//import java.util.Random;
-
 public class CommonUtilities {
-
-    //public static Random random = new Random();
 
     /**
      * pretty much orgainizes the player's money
